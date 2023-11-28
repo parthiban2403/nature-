@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- botstrap css -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+    <!-- botstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+
+
+    <style>
+        #naturesection {
+            padding: 60px 0px;
+        }
+
+        .Nature {
+            width: 1440px;
+            height: 960px;
+            background-image: url(images/611_preview_r.v2.jpg);
+            background-size: cover;
+            background-position: cover;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            background-color: rgb(203, 203, 203);
+            position: absolute;
+            right: 200px;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+            bottom: 240px;
+            border-radius: 40px 10px 40px 40px;
+            z-index: 1;
+            /* transform: rotate(-2deg); */
+        }
+
+        .box img {
+            width: 600px;
+            position: absolute;
+            top: -330px;
+            right: -140px;
+        }
+
+        /* .box :hover {
+            background-color: rgb(31, 176, 53);
+            cursor: pointer;
+        } */
+
+        .natureblock {
+            width: 1300px;
+            height: 820px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, .3);
+            backdrop-filter: blur(10px);
+            padding: 0px 30px;
+            margin: 70px 20px 10px;
+            /* box-shadow: 0px 5px 5px rgba(0, 0, 0, .3); */
+            position: relative;
+            border: solid rgba(37, 200, 28, 0.51) 2px;
+            /* opacity: .5; */
+
+        }
+
+        .natureblock h5 {
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: 5px;
+            font-weight: 700;
+            position: absolute;
+            top: 35px;
+            left: 45px;
+        }
+
+        .nav {
+            margin: 35px 0px 0px 650px;
+            position: relative;
+        }
+
+        .nav a {
+            color: #d5d5d5;
+            font-size: 20px;
+            margin: 0px 15px;
+            text-decoration: none;
+        }
+
+        .bi-search {
+            color: #d5d5d5;
+            font-size: 23px;
+            margin: 0px 18px;
+        }
+
+        .box-1 {
+            width: 100px;
+            height: 40px;
+            /* background-color: rgb(38, 215, 65); */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 2px rgb(31, 176, 53);
+            border-radius: 30px;
+            margin-left: 20px;
+        }
+
+        .box-1:hover {
+            background-color: rgb(31, 176, 53);
+            color: #fff;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        .box-1 h4 {
+            font-size: 20px;
+            padding-top: 5px;
+            font-weight: 400;
+        }
+
+        .natureblock h6 {
+            font-size: 63px;
+            padding-top: 290px;
+            color: #fff;
+            position: absolute;
+            top: -95px;
+            left: 45px;
+        }
+
+        .nature-1 h1 {
+            font-size: 230px;
+            color: #fff;
+            text-shadow: 6px 0px 2px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 210px;
+        }
+
+        .nature-2 h1 {
+            font-size: 230px;
+            color: #fff;
+            /* color: rgb(38, 215, 65); */
+            text-shadow: 6px 0px 2px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 210px;
+            left: 180px;
+            z-index: -1;
+            transition: all 1s;
+        }
+
+        .natureblock:hover .nature-2 h1 {
+            color: rgb(38, 215, 65);
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        .nature-3 h1 {
+            font-size: 230px;
+            color: #fff;
+            text-shadow: 6px 0px 2px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 210px;
+            left: 280px;
+            z-index: -2;
+        }
+
+        .nature-4 h1 {
+            font-size: 230px;
+            color: #fff;
+            text-shadow: 6px 0px 2px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 280px;
+            left: 341px;
+            z-index: -3;
+        }
+
+        .nature-5 h1 {
+            font-size: 230px;
+            color: #FFf;
+            text-shadow: 6px 0px 2px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 210px;
+            left: 438px;
+            transition: all 1s;
+        }
+
+        .natureblock:hover .nature-5 h1 {
+            color: rgb(38, 215, 65);
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        .nature-6 h1 {
+            font-size: 230px;
+            color: #fff;
+            text-shadow: 6px 0px 2px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 210px;
+            left: 571px;
+            transition: all 1s;
+        }
+
+        .natureblock:hover .nature-6 h1 {
+            color: rgb(38, 215, 65);
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+
+        .natureblock p {
+            width: 520px;
+            color: #ebebeb;
+            font-size: 20px;
+            padding: 480px 0px 20px 20px;
+            line-height: 33px;
+        }
+
+        .natureblock button {
+            padding: 15px 33px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            border: solid 2px rgb(31, 176, 53);
+            /* background-color: rgb(31, 176, 53); */
+            color: #fff;
+            background: none;
+            margin-left: 20px;
+            border-radius: 60px;
+            font-weight: 600;
+            transition: all 1s;
+        }
+
+        .natureblock button:hover {
+            background-color: rgb(31, 176, 53);
+            color: #fff;
+            cursor: pointer;
+            transition: all 1s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section id="naturesection">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="Nature">
+
+                        <div class="box">
+                            <img src="images/978429bbb700c68d7cae5661e75ce6dc.png" alt="">
+                        </div>
+
+                        <div class="natureblock">
+
+                            <h5>N.A.T.U.RE</h5>
+
+                            <div class="nav">
+                                <a href="#">Home</a>
+                                <a href="#">Plants</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact</a>
+
+                                <i class="bi bi-search"></i>
+
+                                <div class="box-1">
+                                    <h4>Log In</h4>
+                                </div>
+
+                            </div>
+
+                            <h6>SAVE</h6>
+                            <div class="nature-1">
+                                <h1>N</h1>
+                            </div>
+                            <div class="nature-2">
+                                <h1>A</h1>
+                            </div>
+                            <div class="nature-3">
+                                <h1>T</h1>
+                            </div>
+                            <div class="nature-4">
+                                <h1>U</h1>
+                            </div>
+                            <div class="nature-5">
+                                <h1>R</h1>
+                            </div>
+                            <div class="nature-6">
+                                <h1>E</h1>
+                            </div>
+                            <p>
+                                Nature, in the broadest sense, is the physical world or universe. "Nature" can refer to
+                                the
+                                phenomena of the physical world, and also to life in general.</p>
+
+                            <button>GET STARTED</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
